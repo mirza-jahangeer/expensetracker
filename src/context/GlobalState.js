@@ -7,7 +7,7 @@ const intialState = {
         {id:2, description:"Allowance", amount: 100},
         {id:3, description:"Rent", amount: 200}
     ]
-}
+};
 // Create the global context
 
 export const GlobalContext = createContext(intialState);
