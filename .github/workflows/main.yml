@@ -37,5 +37,5 @@ jobs:
     
     # Deploy Surge
     - name: Deploy React App to Surge
-      run: surge ./build z._?zexpensetracker-mirza.surge.sh --token ${{ secrets.My_TOKEN }}
+      run: surge ./build z.__?zexpensetracker-mirza.surge.sh --token ${{ secrets.My_TOKEN }}
    
