@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AddTransaction = () => {
 
-    let [text, setText] = React.useState("");
+    let [text, setText] = React.useState('');
     let [amount, setAmount] = React.useState(0);
     return (
         <div>

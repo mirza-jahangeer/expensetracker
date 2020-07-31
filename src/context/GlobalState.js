@@ -8,6 +8,8 @@ const initialState = {
         {id:3, description:"Rent", amount: 200}
     ]
 }
+
+
 // Create the global context
 
 export const GlobalContext = createContext(initialState);
@@ -17,11 +19,18 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({childern}) => {
     
  const [state, dispatch] = useReducer(AppReducer, initialState);
+
+ // Actions for transactions
+ function delTransaction(id){
+    dispatch({type:"DELETE_TRANSATION", payload:id});
+ }
     return(
     <GlobalContext.Provider value={{
         transactions:state.transactions
     }}>
-        {childern}
+        {childern}  
     </GlobalContext.Provider>
-    )
+    );
 }
+// All the components are wrapped in GlobalCfontext.Provider
+// because {childern} prop refers to components in App Component.
